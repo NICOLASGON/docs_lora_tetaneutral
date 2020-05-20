@@ -1,0 +1,40 @@
+site_name: LoRaWAN Tetaneutral.net
+site_url: https://docs.lora.tetaneutral.net
+site_author: Tetaneutral.net
+site_description: Documentation LoRaWAN Toulouse
+copyright: Copyright © 2020 Tetaneutral.net
+
+docs_dir: 'docs'
+
+theme:
+  name: 'material'
+  language: fr
+  include_sidebar: true
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - tabs
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+nav:
+  - Le projet:
+    - index.md
+  - LoRaWAN: 
+    - lorawan/lorawan.md
+    - lorawan/crypto.md
+  - Noeuds: 
+    - devices/yah.md
+    - devices/esp32.md
+    - devices/feather-m0.md
+  - Passerelles:
+    - gateways/imst.md
+    - gateways/chisterapi.md
+  - Tutoriels:
+    - tutorials/lorawan-connection.md
