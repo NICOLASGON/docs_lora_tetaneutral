@@ -1,2 +1,7 @@
+FROM squidfunk/mkdocs-material as mkdocs-builder
+WORKDIR /docs
+COPY . /docs
+RUN mkdocs build
+
 FROM nginx:alpine
-COPY site/ /usr/share/nginx/html
+COPY --from=mkdocs-builder /docs/site /usr/share/nginx/html
