@@ -1,7 +1,21 @@
-# LoRaWAN Tetaneutral.net
+# Réseau LoRaWAN
 
-!!! Info
-    Un projet mené par Tetaneutral.net, l'IUT de Blagnac et LinuxÉdu
+## Tetaneutral.net
+
+Tetaneutral.net est un fournisseur d'accès à Internet associatif opérant actuellement un réseau radio sur Toulouse et ses environs ainsi qu'un hébergeur associatif.
+
+L'association est membre de la Fédération des fournisseurs d’accès à Internet associatifs ([FFDN](https://www.ffdn.org/)) qui regroupe des [projets similaires](https://db.ffdn.org/) en France, en Belgique et en Suisse.
+
+Tetaneutral.net désire via ce projet de déploiement d'un réseau LoRaWAN participatif, étendre ses activités associatives à l'Internet Des Objets et fournir un réseau citoyen sur la ville de Toulouse et de sa région.
+
+Ce projet est soutenu par : 
+
+* [Tetaneutral.net](https://tetaneutral.net/)
+* [LinuxÉdu](https://www.linuxedu.org/)
+* [Linux-Tarn](https://blog.linuxtarn.org/)
+* [IUT de Blagnac](https://www.iut-blagnac.fr/fr/)
+
+et leurs sympathisants, des enseignants de collèges, lycées et universités...
 
 ## Le projet
 
@@ -15,23 +29,7 @@ Ce projet s'articule autour de quatre aspects :
 
 * Recherche: Fournir une plate-forme utilisable pour la recherche sur les protocoles radios, les optimisations, le réseau... En plus de la possibilité de modifier la pile radio, nous proposons des outils comme InfluxDB, Node-RED et grafana.
 
-De façon plus sous jacente, notre ambition est de créer une extension du projet et de la philosophie de [Tetaneutral.net](http://www.tetaneutral.net/) à l'internet des objets. Le tout dans la philosophie du [logiciel libre](https://www.april.org/articles/intro/ll.html).
-
-![Architecture](assets/img/los.png)
-
-Pour le moment l'architecture logicielle est composée de deux parties :
-
-- Une plateforme data qui accueille une base de donnée (influxDB) et une application web type grafana afin de les visualiser simplement. Il y a également Node-RED.
-
-- Un serveur de réseau LoRaWAN (loraserver) afin de centraliser les flux de données qui proviennent des passerelles et les enregistrer sur la plateforme data.
-
-Tous ces logiciels libres sont actuellement disponibles sur les serveurs de Tetaneutral.net. Ils sont utilisables par tous les membres du projet.
-
-Nous avons une dizaine de passerelles en cours de configuration qui vont être déployées peu à peu.
-
-Ce projet est soutenu par : [Tetaneutral.net](https://tetaneutral.net/), [LinuxÉdu](https://www.linuxedu.org/), [Linux-Tarn](https://blog.linuxtarn.org/), [l'IUT de Blagnac](https://www.iut-blagnac.fr/fr/), leurs sympathisants, des enseignants de collèges, lycées et universités...
-
-Venez faire de l'open-innovation disruptive en toute agilité digitale ! ;)
+Nous avons plus d'une quinzaine de passerelles déployées sur Toulouse et sa région.
 
 Vous êtes enseignant ou enseignante en collège, lycée, université ? Dans l'éducation populaire ? Vous avez un intérêt professionnel ou simplement personnel pour ce sujet ?
 

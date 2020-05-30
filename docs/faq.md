@@ -1,7 +1,5 @@
 # Foire Aux Questions
 
-Bienvenue sur la foire aux questions du projet étudiant effectué au sein du département informatique de l'Institut Universitaire Technologique de Blagnac. 
-
 ## LoRa et LoRaWAN, ce n’est pas la même chose?
 
 LoRa pour _Long Range_, est une modulation radio permettant à des équipements de transmettre des informations sans fil. C’est un réseau étendu à faible consommation (_Low Power Wide-Area Network_ (LPWAN)). Elle utilise la bande [ISM](https://fr.wikipedia.org/wiki/Bande_industrielle,_scientifique_et_m%C3%A9dicale) (868 Mhz en Europe, d'utilisation libre dans certaines mesures). Cette modulation radio correspond à la couche liaison.
@@ -111,24 +109,16 @@ Voir la page "cryptographie" pour plus d'informations.
 
 Si vous voulez essayez le réseau LoRaWAN et que vous avez des connaissances en développement, il vous faudra de nombreux équipements, voici une solution. Sachez qu’elle n’est pas unique, et qu’il est tout à fait possible d’utiliser d’autres équipements. Ainsi il va vous falloir : 
 
-[width="100%",options="header,footer"]
-|====================
-|Objet  | Utilité  |  Prix Min
-| RAK831 : passerelle | Relie le réseau LoRa au serveur  |  
-140
-
-| Raspberry Pi | 
-Objet sur lequel vous allez pouvoir agir, développer et concevoir votre installation
- |  30
-| 
-GPS Antenna 
- | Antenne GPS permettant de localiser |15  
-| Converter Board |  |  30
-| Raspberry Pi Casing  | Protection du Rapsberry  |  5
-| LoRa Antenna  | Antenne de diffusion et de réception des données |  15
-| Micro USB  | Cable USB pour relier votre raspberry à votre ordinateur  | 13 
-| 16G TF Card  | Carte micro-SD, permettant de disposer d’une mémoire externe  |  7
-|====================
+| Objet | Utilité | Prix Min
+| ----- | ------- | --------
+| RAK831 : passerelle | Relie le réseau LoRa au serveur  | 140 €
+| Raspberry Pi | Objet sur lequel vous allez pouvoir agir, développer et concevoir votre installation | 30 €
+| GPS Antenna  | Antenne GPS permettant de localiser | 15 €
+| Converter Board |  | 30 €
+| Raspberry Pi Casing | Protection du Rapsberry  | 5 €
+| LoRa Antenna  | Antenne de diffusion et de réception des données | 15 €
+| Micro USB  | Cable USB pour relier votre raspberry à votre ordinateur | 13 €
+| 16G TF Card  | Carte micro-SD, permettant de disposer d’une mémoire externe  | 7 €
 
 Ici, les prix sélectionnés sont ceux les moins chers proposés sur Internet. Donc si vous achetez chacun de ces objets individuellement, cela vous coutera minimum 255 euros. 
 Des packs sont disponibles à environ 200 euros sur Internet comprenant le matériel nécessaire pour commencer. 

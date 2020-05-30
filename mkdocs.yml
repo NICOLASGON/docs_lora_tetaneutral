@@ -28,20 +28,17 @@ markdown_extensions:
 nav:
   - 'Le projet':
     - index.md
+    - faq.md
+  - 'LoRaWAN':
     - lorawan/lorawan.md
     - lorawan/crypto.md
-    - faq.md
-  - 'Services':
-    - services/services.md
   - 'Noeuds':
-    - 'Yah': devices/yah.md
-    - 'esp32': devices/esp32.md
-    - 'feather-m0': devices/feather-m0.md
+    - devices/yah.md
+    - devices/esp32.md
+    - devices/feather-m0.md
   - 'Passerelles':
     - gateways/imst.md
     - gateways/chisterapi.md
-  - 'Infrastructure réseau':
-    - infra/infra.md
   - 'Tutoriels':
     - tutorials/lorawan-connection.md
     - tutorials/capteur-temperature.md
@@ -49,3 +46,5 @@ nav:
     - tutorials/downlink.md
     - tutorials/nodered-mqtt.md
     - tutorials/client-mqtt-python.md
+  - 'Galerie':
+    - gallery/divers.md

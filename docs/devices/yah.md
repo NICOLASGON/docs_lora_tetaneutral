@@ -2,7 +2,7 @@
 
 ## Présentation
 
-Le Yah! - ou Yahi pour "_Yet Another Hardware for !oT_" est un autre nœud LoRa de l'écosystème Arduino. Il est produit par https://www.snootlab.com[Snootlab]. Comme le Feather M0 qui embarque un processeur ARM Cortex M0 à 48 MHz, il est équivalent à l'Arduino Zero, mais vient avec un modem LoRa^TM^, une LED RVB, un bouton poussoir, un boitier plastique avec un logement pour deux piles AAA et une antenne 868 MHz intégrée et efficace. Le bouton USER, la LED RGB, le port USB et le connecteur d'alimentation débrochable restent accessible une fois le capot refermé. Pour les utilisations fixes du Yah!, le boîter peut être clippé sur une attache sur sa bordure inférieure. Il est possible d'étendre les capacités du Yah! en ajoutant un ou plusieurs _shields_ très intégrés.
+Le Yah! - ou Yahi pour "_Yet Another Hardware for !oT_" est un autre nœud LoRa de l'écosystème Arduino. Il est produit par https://www.snootlab.com[Snootlab]. Comme le Feather M0 qui embarque un processeur ARM Cortex M0 à 48 MHz, il est équivalent à l'Arduino Zero, mais vient avec un modem LoRa, une LED RVB, un bouton poussoir, un boitier plastique avec un logement pour deux piles AAA et une antenne 868 MHz intégrée et efficace. Le bouton USER, la LED RGB, le port USB et le connecteur d'alimentation débrochable restent accessible une fois le capot refermé. Pour les utilisations fixes du Yah!, le boîter peut être clippé sur une attache sur sa bordure inférieure. Il est possible d'étendre les capacités du Yah! en ajoutant un ou plusieurs _shields_ très intégrés.
 
 ![yah_animated](../assets/img/yah_mouting_animated.gif)
 
@@ -10,7 +10,7 @@ Grâce à son boîtier compact, le Yah! permet de fabriquer des prototypes d'obj
 
 ## Connexion au réseau LoRaWAN avec LMIC
 
-La pile LMIC permet à un objet de se connecter à un réseau LoRaWAN. Se référer au link:../generic-lorawan-node-basic-join[tutoriel de connexion LoRaWAN] pour tous les détails sur l'utilisation de LMIC dans Arduino.
+La pile LMIC permet à un objet de se connecter à un réseau LoRaWAN. Se référer au tutoriel de connexion LoRaWAN pour tous les détails sur l'utilisation de LMIC dans Arduino.
 
 ### Câblage
 

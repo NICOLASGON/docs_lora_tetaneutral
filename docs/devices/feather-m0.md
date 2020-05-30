@@ -1,4 +1,4 @@
-# Feather M0
+# Feather M0+
 
 ## Présentation
 

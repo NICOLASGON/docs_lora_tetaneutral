@@ -1,7 +1,4 @@
-# Sécurité en LoRaWAN
-
-!!! warning
-    Document en cours de rédaction...
+# Sécurité du protocole LoRaWAN
 
 ## Sécurité ?
 
