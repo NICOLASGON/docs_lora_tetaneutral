@@ -1,4 +1,4 @@
-site_name: LoRaWAN Tetaneutral.net
+site_name: Réseau LoRaWAN Tetaneutral.net
 site_url: https://docs.lora.tetaneutral.net
 site_author: Tetaneutral.net
 site_description: Documentation LoRaWAN Toulouse
@@ -9,6 +9,8 @@ docs_dir: 'docs'
 theme:
   name: 'material'
   language: fr
+  logo: assets/img/logo.png
+  favicon: assets/img/logo.png
   include_sidebar: true
   palette:
     primary: indigo
@@ -24,17 +26,26 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Le projet:
+  - 'Le projet':
     - index.md
-  - LoRaWAN: 
     - lorawan/lorawan.md
     - lorawan/crypto.md
-  - Noeuds: 
-    - devices/yah.md
-    - devices/esp32.md
-    - devices/feather-m0.md
-  - Passerelles:
+    - faq.md
+  - 'Services':
+    - services/services.md
+  - 'Noeuds':
+    - 'Yah': devices/yah.md
+    - 'esp32': devices/esp32.md
+    - 'feather-m0': devices/feather-m0.md
+  - 'Passerelles':
     - gateways/imst.md
     - gateways/chisterapi.md
-  - Tutoriels:
+  - 'Infrastructure réseau':
+    - infra/infra.md
+  - 'Tutoriels':
     - tutorials/lorawan-connection.md
+    - tutorials/capteur-temperature.md
+    - tutorials/noeud-mobile-et-gps.md
+    - tutorials/downlink.md
+    - tutorials/nodered-mqtt.md
+    - tutorials/client-mqtt-python.md

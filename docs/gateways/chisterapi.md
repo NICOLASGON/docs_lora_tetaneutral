@@ -44,7 +44,7 @@ L'utilisateur par défaut est « pi ». Son mot de passe est raspberry (à chang
 
  sudo raspi-config
 
-== Rpi en passerelle LoRaWAN sur IoT Tétaneutral
+== Rpi en passerelle LoRaWAN sur IoT Tetaneutral.net
 
 [WARNING]
 =====
@@ -64,7 +64,7 @@ L'utilisateur par défaut est « pi ». Son mot de passe est raspberry (à chang
 
 Dans le fichier `main.cpp`, remplacer `int ssPin=6;` par `int ssPin=10;`.
 
-Puis, mettre l'IP et le bon port de Tétaneutral dans le fichier `main.cpp` :
+Puis, mettre l'IP et le bon port de Tetaneutral.net dans le fichier `main.cpp` :
 
 [source,c]
 -----

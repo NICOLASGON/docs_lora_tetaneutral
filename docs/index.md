@@ -7,13 +7,13 @@
 
 Ce projet s'articule autour de quatre aspects :
 
-Couverture: Offir une couverture maximale en déployant un ensemble de passerelles LoRaWAN. Certaines sont en production sur Toulouse et Albi. Tous les points Tétaneutral peuvent devenir des lieux d'installation de passerelles. Ceci est facilité par la portée de LoRa (compter autour de 5km en ville).
+* Couverture: Offir une couverture maximale en déployant un ensemble de passerelles LoRaWAN. Certaines sont en production sur Toulouse et Albi. Tous les points Tetaneutral.net peuvent devenir des lieux d'installation de passerelles. Ceci est facilité par la portée de LoRa (compter autour de 5km en ville).
 
-Ressources: Écrire un ensemble de tutoriels et ressources pédagogiques du collège à l'université. Parmi les ressources en cours d'écriture citons des relevés de pollution, de température, de position... Les aspects pédagogiques sont importants. Plusieurs enseignants et enseignantes de la région ont manifesté leur intérêt. Certains établissements vont être équipés de passerelles LoRaWAN.
+* Ressources: Écrire un ensemble de tutoriels et ressources pédagogiques du collège à l'université. Parmi les ressources en cours d'écriture citons des relevés de pollution, de température, de position... Les aspects pédagogiques sont importants. Plusieurs enseignants et enseignantes de la région ont manifesté leur intérêt. Certains établissements vont être équipés de passerelles LoRaWAN.
 
-Objets connectés: Proposer des objets de type Arduino et des capteurs afin de pouvoir pousser facilement des données sur nos plateformes et les traiter (visualisation, envoyer une commande selon les valeurs...)
+* Objets connectés: Proposer des objets de type Arduino et des capteurs afin de pouvoir pousser facilement des données sur nos plateformes et les traiter (visualisation, envoyer une commande selon les valeurs...)
 
-Recherche: Fournir une plate-forme utilisable pour la recherche sur les protocoles radios, les optimisations, le réseau... En plus de la possibilité de modifier la pile radio, nous proposons des outils comme InfluxDB, Node-RED et grafana.
+* Recherche: Fournir une plate-forme utilisable pour la recherche sur les protocoles radios, les optimisations, le réseau... En plus de la possibilité de modifier la pile radio, nous proposons des outils comme InfluxDB, Node-RED et grafana.
 
 De façon plus sous jacente, notre ambition est de créer une extension du projet et de la philosophie de [Tetaneutral.net](http://www.tetaneutral.net/) à l'internet des objets. Le tout dans la philosophie du [logiciel libre](https://www.april.org/articles/intro/ll.html).
 
@@ -25,7 +25,7 @@ Pour le moment l'architecture logicielle est composée de deux parties :
 
 - Un serveur de réseau LoRaWAN (loraserver) afin de centraliser les flux de données qui proviennent des passerelles et les enregistrer sur la plateforme data.
 
-Tous ces logiciels libres sont actuellement disponibles sur les serveurs de Tétaneutral. Ils sont utilisables par tous les membres du projet.
+Tous ces logiciels libres sont actuellement disponibles sur les serveurs de Tetaneutral.net. Ils sont utilisables par tous les membres du projet.
 
 Nous avons une dizaine de passerelles en cours de configuration qui vont être déployées peu à peu.
 
