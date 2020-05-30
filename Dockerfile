@@ -1,2 +1,2 @@
-FROM squidfunk/mkdocs-material
-COPY . /docs
+FROM nginx:alpine
+COPY site/ /usr/share/nginx/html
