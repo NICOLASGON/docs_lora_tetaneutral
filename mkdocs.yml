@@ -39,6 +39,9 @@ nav:
   - 'Passerelles':
     - gateways/imst.md
     - gateways/chisterapi.md
+  - 'Installations':
+    - installations/v1.md
+    - installations/foudre.md
   - 'Tutoriels':
     - tutorials/lorawan-connection.md
     - tutorials/capteur-temperature.md
