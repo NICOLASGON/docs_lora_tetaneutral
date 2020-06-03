@@ -1,8 +1,8 @@
 # Réseau LoRaWAN
 
-## Tetaneutral.net
+## Les acteurs
 
-Tetaneutral.net est un fournisseur d'accès à Internet associatif opérant actuellement un réseau radio sur Toulouse et ses environs ainsi qu'un hébergeur associatif.
+Tetaneutral.net est un fournisseur d'accès à Internet associatif opérant un réseau radio sur Toulouse et ses environs ainsi qu'un hébergeur associatif.
 
 L'association est membre de la Fédération des fournisseurs d’accès à Internet associatifs ([FFDN](https://www.ffdn.org/)) qui regroupe des [projets similaires](https://db.ffdn.org/) en France, en Belgique et en Suisse.
 
@@ -13,7 +13,7 @@ Ce projet est soutenu par :
 * [Tetaneutral.net](https://tetaneutral.net/)
 * [LinuxÉdu](https://www.linuxedu.org/)
 * [Linux-Tarn](https://blog.linuxtarn.org/)
-* [IUT de Blagnac](https://www.iut-blagnac.fr/fr/)
+* [L'IUT de Blagnac](https://www.iut-blagnac.fr/fr/)
 
 et leurs sympathisants, des enseignants de collèges, lycées et universités...
 
@@ -36,5 +36,3 @@ Vous êtes enseignant ou enseignante en collège, lycée, université ? Dans l'�
 Rejoignez-nous !
 
 Liste de diffusion : [https://lists.tetaneutral.net/listinfo/iot](https://lists.tetaneutral.net/listinfo/iot)
-
-Sur IRC : [https://kiwiirc.com/client/irc.freenode.net?chan=#tetaneutral.net](https://kiwiirc.com/client/irc.freenode.net?chan=#tetaneutral.net)
