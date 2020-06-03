@@ -36,3 +36,19 @@ Vous êtes enseignant ou enseignante en collège, lycée, université ? Dans l'�
 Rejoignez-nous !
 
 Liste de diffusion : [https://lists.tetaneutral.net/listinfo/iot](https://lists.tetaneutral.net/listinfo/iot)
+
+## Contribuer à la documentation
+
+Ce site est généré par mkdocs à partir de documents texte en markdown.
+
+Pour contribuer, il suffit d'installer mkdocs et le thème : 
+```
+pip install mkdocs mkdocs-material
+```
+Forker les sources dans votre compte github et faites vos modifications. Vous pouvez les visualiser avec :
+```
+mkdocs serve
+```
+Pour soumettre vos modifications, faites un pull-request.
+
+Sinon, plus simplement, il suffit de nous contacter avec vos propositons ! :)
