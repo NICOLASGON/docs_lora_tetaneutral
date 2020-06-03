@@ -4,6 +4,9 @@ site_author: Tetaneutral.net
 site_description: Documentation LoRaWAN Toulouse
 copyright: Copyright © 2020 Tetaneutral.net
 
+repo_name: tetaneutral.net/docs_lora
+repo_url: https://github.com/NICOLASGON/docs_lora_tetaneutral
+
 docs_dir: 'docs'
 
 theme:
