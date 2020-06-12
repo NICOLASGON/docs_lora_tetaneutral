@@ -38,6 +38,10 @@ La plate-forme POD-IoT est utilisée dans les enseignements de DUT Informatique,
 
 [LinuxÉdu](https://www.linuxedu.org/) et [Linux-Tarn](https://blog.linuxtarn.org/) sont deux associations d'utilisatrices et utiliseurs de logiciels et ressources sous licences libres. Très liées au monde l'éducation, elles expérimentent, développent de nombreuses ressources.
 
+Environ une fois par mois Linux-Tarn organise une réunion sous forme d'atelier à Albi.
+
+Les enseignantes et enseignants membres de ces associations utilisent POD-IoT pour leurs cours et participent activement à la rédaction de contenus.
+
 ### Et aussi...
 
 leurs sympathisants, des enseignants de collèges, lycées et universités...
