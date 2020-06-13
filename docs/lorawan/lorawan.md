@@ -58,13 +58,9 @@ Pour les cartes type Arduino (WiNos, Feather M0...), nous utiliserons LMIC. IBM 
 
 ## Matériels pour passerelles LoRaWAN
 
-### Chistera-Pi
+Notre kit actuel est basée sur un concentrateur LoRa IMST et un RaspberryPi
 
-La ChisteraPi est une carte d'extension pour RaspberryPi qui permet de mettre en oeuvre de nombreux protocoles grâce à ses deux transmetteurs qui permettent d'émettre dans les deux bandes ISM (433MHz et 868MHz).
-
-![chisterapi](../assets/img/chistera-pi.jpg)
-
-La ChisteraPi ne permet que de faire du *mono-canal* mais cela peut être suffisant. Si vous dépassez plusieurs dizaines d'objets connectés, il faudra envisager du multicanal...
+Voir la section passerelles pour plus d'informations.
 
 ### Lite-GW avec iC880A
 
@@ -74,18 +70,26 @@ LoRa Lite Gateway (LGW) est une plateforme de développement composée du concen
 
 ## Matériels pour objets
 
+!!! warning
+    Si votre carte est livrée sans antennes, il est *vivement* conseillée d'en avoir une !
+    Il vous suffit d'un fil pour faire une "quarter wave whip antenna". Il suffit de couper le fil à la bonne longueur. En Europe, pour 868 MHz, c'est 8.2 cm.
+
+
 ### Feather M0 LoRa 900Mhz
 
 Le Feather M0 embarque un processeur ARM Cortex M0 à 48 MHz. Le même que sur la Arduino Zero. Le module LoRa est un SX127x avec interface SPI.
 
 [https://www.adafruit.com/product/3178](https://www.adafruit.com/product/3178)
 
-Il n'y a pas d'antenne mais il suffit d'un fil pour faire une "quarter wave whip antenna". Il suffit de couper le fil à la bonne longueur :
+Il n'y a pas d'antenne mais il suffit d'un fil pour faire une "quarter wave whip antenna". Il suffit de couper le fil à la bonne longueur. En Europe, pour 868 MHz, c'est 8.2 cm.
 
-* 433 MHz - 16.5 cm
-* 868 MHz - 8.2 cm
-* 915 MHz - 7.8 cm
+Voir la section dédiée au [FeatherM0](../devices/feather-m0.md)
 
-### WiNo v2 aka Yah!
 
-À venir car en cours de tests...
+### Yah!
+
+Voir la section dédiée au [Yah!](../devices/yah.md)
+
+### ESP32
+
+Voir la section [ESP32](../devices/esp32.md)
