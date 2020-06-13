@@ -41,11 +41,11 @@ Le cablage ci-dessous est pour Arduino mais c'est la même chose avec un feather
  * Copyright (c) 2015 Thomas Telkamp and Matthijs Kooijman
  * Modifié par NG et RB (IUT de Blagnac). *
  * This uses OTAA (Over-the-air activation).
- * 
- * This code use a "one-wire" DS18B20 temperature sensor 
+ *
+ * This code use a "one-wire" DS18B20 temperature sensor
  * and send this temperature to loraserver.
- * 
- * With the help of Node-Red and influsDB, one can easily plot temperature ! * 
+ *
+ * With the help of Node-Red and influsDB, one can easily plot temperature ! *
  *
  *******************************************************************************/
 
@@ -66,7 +66,7 @@ Le cablage ci-dessous est pour Arduino mais c'est la même chose avec un feather
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 OneWire oneWire(ONE_WIRE_BUS);
 
-// Pass our oneWire reference to Dallas Temperature. 
+// Pass our oneWire reference to Dallas Temperature.
 DallasTemperature sensors(&oneWire);
 
 float temp_float;
@@ -119,27 +119,27 @@ void do_send(osjob_t* j){
         Serial.println(F("OP_TXRXPEND, not sending"));
     } else {  
       Serial.print("Requesting temperatures...");
-      
+
       sensors.requestTemperatures(); // Send the command to get temperatures
       Serial.println("DONE");
 
       // After we got the temperatures, we can prepare the payload.
       // We use the function ByIndex, and as an example get the temperature from the first sensor only.
       // Serial.print("Temperature for the device 1 (index 0) is: ");
-      
+
       float temperature = sensors.getTempCByIndex(0);
      //Serial.print("Temperature for the device 1 (index 0) is: ");
      //Serial.println(temperature);
       // We have to convert the float into an ASCII representation
       // and load the paylod
-                       
+
       // we build the packet and concatenate text with float to string + 3 décimales
-      
+
       String packet = String(temperature, 3);
       Serial.println(packet[0]);
-      
+
       uint8_t lmic_packet[packet.length()+1];
-   
+
       for(int i=0; i<packet.length()+1; i++){
         lmic_packet[i] = packet[i];
       }
@@ -148,7 +148,7 @@ void do_send(osjob_t* j){
        // Prepare upstream data transmission at the next possible time.
 
       LMIC_setTxData2(1, lmic_packet, sizeof(lmic_packet)-1, 0);
-            
+
       Serial.println(F("Packet queued"));
     }
     // Next TX is scheduled after TX_COMPLETE event.
@@ -204,17 +204,17 @@ void onEvent (ev_t ev) {
 
 void setup() {
     Serial.begin(9600);
-    
+
     //**** OneWire ****
     Serial.println("Dallas Temperature IC Control Library Demo");
     // Start up the library
     sensors.begin();
-    
+
     while (millis() < 5000) {
     Serial.print("millis() = "); Serial.println(millis());
     delay(500);
     }
-    
+
     Serial.println(F("Starting"));
 
     #ifdef VCC_ENABLE
@@ -234,7 +234,7 @@ void setup() {
 }
 
 void loop() {
-  // call sensors.requestTemperatures() to issue a global temperature 
+  // call sensors.requestTemperatures() to issue a global temperature
   // request to all devices on the bus
   //Serial.print("Requesting temperatures...");
   //sensors.requestTemperatures(); // Send the command to get temperatures
@@ -275,7 +275,7 @@ renvoie bien la température.
 !!! tip
     Si vous avez un compte sur le Node-RED de Tetaneutral.net, passez cette étape.
 
-Installer Node-RED via les depôts ou utiliser un container docker (recommandé).
+Installer Node-RED via les depôts ou utiliser un container docker (recommandé) ou encore un de nos services Noede-RED.
 
 Premier lancement du container :
 
@@ -357,7 +357,7 @@ Selon votre version de CircuitPython, choisir le bon _bundle_ et copier/coller d
 Le code suivant (venant du dépôt gitub du bundle) permet de tester que tout fonctionne :
 
 ``` python
-# Simple demo of printing the temperature from the first found DS18x20 
+# Simple demo of printing the temperature from the first found DS18x20
 # sensor every second.
 # Author: Tony DiCola
 

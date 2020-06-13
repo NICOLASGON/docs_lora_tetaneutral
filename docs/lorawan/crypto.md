@@ -1,4 +1,4 @@
-# Sécurité du protocole LoRaWAN
+# Cryptographie et sécurité LoRaWAN
 
 ## Sécurité ?
 
@@ -23,7 +23,7 @@ Voici les méthodes utilisées, en général, pour assurer ces quatre fondamenta
 
 Lors de la configuration d'un device, on doit choisir entre deux modes d'activation :
 
-### OTAA (Over The Air Activation) 
+### OTAA (Over The Air Activation)
 
 On choisit une clé _AppKey_ que l'on configure aussi dans le serveur d'application. Au démarrage, le noeud tente de se connecter par lui-même en envoyant une requête dite de "_join_" au serveur LoRaWAN via la passerelle. Si le serveur l'accepte, deux clés dites de session (_NwkSKey_ et _AppSKey_) sont négociées et générées à partir d'un "secret commun". C'est ce secret commun, _AppKey_  qui est stocké à la fois sur le noeud (en dur dans le code) et sur la passerelle. Ce processus est appelé OTAA (_Over the air activation_). Ces clés sont conservées jursqu'à leur réinitialisation.
 
@@ -79,7 +79,7 @@ MACPayload
 * FPort : Frame Port pour déterminer si le message contient seulement des commandes MAC (vaut 0 dans ce cas) ou si les données sont spécifiques pour une application (contient alors son numéro)
 * FRMPayload : notre message chiffré avant le calcul du code d'intégrité (MIC)
 
-Le _message integrity code_ est calculé sur les champs : MHDR|FHDR|FPort|FRMPayload. 
+Le _message integrity code_ est calculé sur les champs : MHDR|FHDR|FPort|FRMPayload.
 
 Selon les spécifications LoRaWAN 1.1, ce code MIC est calculé par `cmacS = aes128_cmac(SNwkSIntKey, B1 | msg)` où `B1` est un bloc de donnée (contenant l'adresse du noeud, la longueur de message, etc...) et `msg`, les champs définis ci-dessus. `SNwkSIntKey` est la clé dérivée à partir des AppKey et Nwkkey.
 
@@ -144,8 +144,7 @@ Le message join-accpet est chiffré avec la _AppKey_ ainsi :
 
 Le mode utilisé pour ce chiffrement AES par le serveur de réseau est ECB. Ainsi le device n'a besoin que de la fonction de chiffrement AES.
 
-[En cours de rédaction...]
- 
+
 ### Hello world, phyPayload !
 
 !!! tip "Objectif"
@@ -160,20 +159,21 @@ Comme nous venons de le voir :
 ** Network Session Key (NwkSkey)
 ** Application Session key (AppSKey)
 
-Ces deux dernières clés sont stockées en mémoire vive sur le noeud et ne changent pas durant toute la durée de connexion (TODO : À confirmer).
+Ces deux dernières clés sont stockées en mémoire vive sur le noeud et ne changent pas durant toute la durée de connexion. (sauf si on implément un renouvellement au niveau de l'objet)
 
 On peut donc récupérer toutes ces clés avec une modification simple du code embarqué sur le noeud.
 
 On ajoute le code suivant dans notre skecth :
 
-``` c
+```c
 // \brief return the current session keys returned from join.
-void LMIC_getSessionKeys (u4_t *netid, devaddr_t *devaddr, xref2u1_t nwkKey, xref2u1_t artKey) {
-    *netid = LMIC.netid;
-    *devaddr = LMIC.devaddr;
-    memcpy(artKey, LMIC.artKey, sizeof(LMIC.artKey));
-    memcpy(nwkKey, LMIC.nwkKey, sizeof(LMIC.nwkKey));
-}
+void LMIC_getSessionKeys (u4_t *netid, devaddr_t *devaddr, xref2u1_t nwkKey, xref2u1_t artKey){
+  *netid = LMIC.netid;
+  *devaddr = LMIC.devaddr;
+  memcpy(artKey, LMIC.artKey, sizeof(LMIC.artKey));
+  memcpy(nwkKey, LMIC.nwkKey, sizeof(LMIC.nwkKey));
+  }
+
 ```
 
 et on l'appelle l'automate LMIC dans le bloc :
@@ -257,23 +257,12 @@ QEcyWQDAEQABeFpyNh9lZUqNqg==
 QEcyWQCAEgABflsMzfdG1nM0xw==
 ```
 
-### Suite...
-
-Ligne 681 : The encryption scheme used is based on the generic algorithm described in IEEE
-
-802.15.4/2006 Annex B [IEEE802154] using AES with a key length of 128 bits.
-
-En fait, l'algorithme de chiffrement AES128 est utilisé pour générer un flux de clés (_keystream_). Pour chaque clé, le chiffré de la payload est obtenu en faisant un XOR entre le clair de la payload et la clé.
+Selon les spécifications, l'algorithme de chiffrement AES128 est utilisé pour générer un flux de clés (_keystream_). Pour chaque clé, le chiffré de la payload est obtenu en faisant un XOR entre le clair de la payload et la "clé".
 
 Ce n'est bien entendu pas un chiffrement optimal en théorie car une personne très motivée pourrait déchiffrer la payload... Il lui faudra un très grand nombre de messages chiffrés pour arriver à découvrir la payload en clair.
 
-Voir [https://www.elektormagazine.com/news/lorawan](https://www.elektormagazine.com/news/lorawan) (à vérifier dans les specifications)
+Pour la suite de la documentation, contactez-nous ! En effet, c'est un des TPs de cryptographie à l'IUT de Blagnac :)
 
-Please see [https://docs.loraserver.io/lora-app-server/integrate/data/](https://docs.loraserver.io/lora-app-server/integrate/data/) 140 for accessing the decrypted application payloads.
-
-When you want to decode & decrypt a LoRaWAN PHYPayload yourself, please see: [https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode](https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode) 142
-
-For just decrypting the FRMPayload, please see: [https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload](https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload) 114
 
 ### Failles de sécurités ?
 
@@ -303,7 +292,7 @@ For just decrypting the FRMPayload, please see: [https://godoc.org/github.com/br
 
 * Utiliser OTAA mais forcer périodiquement un _rejoin_ pour changer les clés de session.
 
-* En ABP, faire en sorte que les clés de session soient uniques pour chaque device. 
+* En ABP, faire en sorte que les clés de session soient uniques pour chaque device.
 
 * Use a secure hardware element in a device to store the security credentials (en Bluetooth ou autre) mais aussi pour effectuer les opérations relatives à la vérofication d'intégrité des messages, le chiffrement et le déchiffrement. This will make it very hard to reverse-engineer the keys by scanning device memories. Additionally, use secure boot to ensure integrity of device firmware.
 
@@ -330,3 +319,9 @@ Webinar de The things network "LoRaWAn Security" : [https://www.youtube.com/watc
 [lora-packet](https://github.com/anthonykirby/lora-packet) ou encore sa [version web](https://lorawan-packet-decoder-0ta6puiniaut.runkit.sh/).
 
 En explorant le code de l'outils nous avons remarqué qu'ils utilisaient les librairies standars de cryptage de leurs langages respectifs (comme [CryptoJS](https://github.com/brix/crypto-js))
+
+Voir [https://www.elektormagazine.com/news/lorawan](https://www.elektormagazine.com/news/lorawan) (à vérifier dans les specifications)
+
+When you want to decode & decrypt a LoRaWAN PHYPayload yourself, please see: [https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode](https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode) 142
+
+For just decrypting the FRMPayload, please see: [https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload](https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload) 114
