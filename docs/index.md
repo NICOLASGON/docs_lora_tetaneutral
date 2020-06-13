@@ -1,5 +1,8 @@
 # Réseau LoRaWAN ouvert
 
+
+![couverture reseau LoRaWAN](../assets/img/couverture-reseau.png)
+
 ## Le projet
 
 Ce projet s'articule autour de quatre points :
@@ -50,7 +53,7 @@ leurs sympathisants, des enseignants de collèges, lycées et universités...
 
 Ce site est généré par mkdocs à partir de documents texte en markdown. Oui, nous aimons bien les sites statiques !
 
-Pour contribuer, il suffit d'installer mkdocs et le thème : 
+Pour contribuer, il suffit d'installer mkdocs et le thème :
 ```
 pip install mkdocs mkdocs-material
 ```

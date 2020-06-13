@@ -1,5 +1,7 @@
 # IMST Lite Gateway
 
+![Passerelle IMST prêtes à être installées](../assets/img/passerelles_boites.jpg)
+
 ## Démarrer la Passerelle
 
 Pour retrouver l'IP de la passerelle sur le réseau local (à adapter) :
