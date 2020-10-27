@@ -32,13 +32,15 @@ nav:
   - 'Le projet':
     - index.md
     - faq.md
+    - faq_technique.md
   - 'LoRaWAN':
     - lorawan/lorawan.md
     - lorawan/crypto.md
   - 'Noeuds':
     - devices/yah.md
     - devices/esp32.md
-    - devices/feather-m0.md
+    - devices/heltec-esp32-lora-v2.md
+    - devices/feather-m0.md 
   - 'Passerelles':
     - gateways/imst.md
     - gateways/chisterapi.md

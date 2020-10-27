@@ -1,4 +1,4 @@
-# Foire Aux Questions
+# FAQ générale
 
 ## LoRa et LoRaWAN, ce n’est pas la même chose?
 
@@ -8,7 +8,7 @@ LoRaWAN est un protocole Low Power Wide Area Network (LPWAN) basé sur LoRa pour
 
 ## Quel est le débit ?
 
-Selon la norma LoRaWAN, le débit est compris entre 0,3 et 50 kbps. Soit entre 40 octets et 6Ko par seconde.
+Selon la norme LoRaWAN, le débit est compris entre 0,3 et 50 kbps. Soit entre 40 octets et 6Ko par seconde.
 
 ## Quelle est la portée ?
 
