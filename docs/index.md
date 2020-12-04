@@ -7,7 +7,7 @@
 
 Ce projet s'articule autour de quatre points :
 
-* Couverture : Offir une couverture maximale en déployant des passerelles LoRaWAN. Certaines sont en production sur Toulouse, Albi et Castres. Tous les points relais de Tetaneutral.net peuvent devenir des lieux d'installation de passerelles.
+* Couverture : Offrir une couverture maximale en déployant des passerelles LoRaWAN. Certaines sont en production sur Toulouse, Albi et Castres. Tous les points relais de Tetaneutral.net peuvent devenir des lieux d'installation de passerelles.
 
 * Ressources : Écrire et partager un ensemble de tutoriels et ressources pédagogiques du collège à l'université. Parmi les ressources en cours d'écriture citons des relevés de pollution, de température, de position... Les aspects pédagogiques sont importants. Plusieurs enseignants et enseignantes de la région ont manifesté leur intérêt. Certains établissements sont équipés de nos passerelles LoRaWAN.
 
