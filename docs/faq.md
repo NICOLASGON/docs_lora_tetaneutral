@@ -33,16 +33,16 @@ Il est particulièrement adapté aux communications "machine to machine" (M2M).
 
 ## Comment fonctionne le protocole MQTT ?
 
-L’ensemble des clients communiquent via un _broker_.
+L’ensemble des clients communique via un _broker_.
 
 Les clients s’enregistrent auprès du broker sur des topics, que l’on peut voir comme des chemins pour accéder à une ressource. Cela leur permet d’être avertis, notifiés lorsque quelqu'un publie sur ces topics.
 
-Cela peut être un topic de température par exemple : /sensor/1/temperature.
+Cela peut être un topic de température par exemple : `/sensor/1/temperature`.
 
-On peut souscrire à un ensemble de topics en utilisant des wildcards # ou +.
+On peut souscrire à un ensemble de topics en utilisant des wildcards `#` ou `+`.
 
-Par exemple, si un client publie sur les topics /sensor/1/temperature et /sensor/1/humidity, un autre client peut écouter ces deux topics à la fois : /sensor/1/#.
-Si plusieurs clients publient leurs températures et humidités en intercalant leur numéro de client sur leur topic, un autre client peut écouter toutes les températures ainsi : /sensor/+/temperature. Il recevra alors les températures du client 1 (/sensor/1/temperature), du client 2 (/sensor/2/temperature), etc.
+Par exemple, si un client publie sur les topics `/sensor/1/temperature` et `/sensor/1/humidity`, un autre client peut écouter ces deux topics à la fois en souscrivant à `/sensor/1/#`.
+Si plusieurs clients publient leurs températures et humidités en intercalant leur numéro de client sur leur topic, un autre client peut écouter toutes les températures ainsi : `/sensor/+/temperature`. Il recevra alors les températures du client 1 (`/sensor/1/temperature`), du client 2 (`/sensor/2/temperature`), etc.
 
 ## Qu’est ce que Node-RED?
 
