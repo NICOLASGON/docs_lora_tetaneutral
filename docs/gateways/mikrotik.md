@@ -2,11 +2,11 @@
 
 _Cette page explique comment configurer la passerelle MikroTik wAP LoRa8 pour rejoindre le réseau de Tetaneutral._
 
-Il s'agit d'une [passerelle LoRaWAN outdoor étanche](https://mikrotik.com/product/wap_lr8_kit) fabriquée par MikroTik et [d'un coût très abordable](https://www.mhzshop.com/shop/3G-4G-5G/LoRa/Gateway-LoRa-MikroTik-wAP-LoRa8-RBwAPR-2nD-R11e-LoRa8.html).
+Il s'agit d'une [passerelle LoRaWAN outdoor étanche](https://mikrotik.com/product/wap_lr8_kit) fabriquée par MikroTik et [d'un coût très abordable](https://www.mhzshop.com/shop/3G-4G-5G/LoRa/Gateway-LoRa-MikroTik-wAP-LoRa8-RBwAPR-2nD-R11e-LoRa8.html). Plus de détails sur la passerelle [ici](https://help.mikrotik.com/docs/display/UM/wAP+LR8+kit).
 
 ![passerelle-mikrotik](../assets/img/passerelle-mikrotik-gateway-01.png)
 
-La gateway contient une antenne interne à faible gain, qui peut être utilisée en absence d'antenne externe connectée sur le port SMA. Par défaut, l'antenne interne est débranchée. Pour l'utiliser, il faut ouvrir le boîtier à l'aide d'un tournevis et inverser les câbles coaxiaux internes sur le connecteur uFL. Le port SMA n'est alors plus utilisable mais l'opération est réversible. 
+La gateway contient une antenne interne à faible gain, qui peut être utilisée en absence d'antenne externe connectée sur le port SMA. Par défaut, l'antenne interne est débranchée. Pour l'utiliser, il faut ouvrir le boîtier à l'aide d'un tournevis et inverser les câbles coaxiaux internes sur le connecteur uFL. Le port SMA n'est alors plus utilisable mais l'opération est réversible. Plus d'informations [ici](https://help.mikrotik.com/docs/display/UM/wAP+LR8+kit#heading-Antennausage). 
 
 ## Préparation
 
@@ -22,7 +22,8 @@ Pour réaliser la configuration, le matériel suivant est nécessaire :
 * Un ordinateur avec carte wifi et navigateur web,
 * Un accès par câble Ethernet à un réseau local.
 
-Remarque : un accès wifi au réseau local est également possible, bien que ce ne soit pas abordé dans ce tutoriel.
+!!! info
+    Un accès wifi au réseau local est également possible, bien que ce ne soit pas abordé dans ce tutoriel.
 
 ## Tutoriel
 
@@ -32,7 +33,8 @@ Remarque : un accès wifi au réseau local est également possible, bien que ce 
 * Alimenter la passerelle par son bloc alimentation fourni,
 * Laisser la passerelle booter quelques dizaines de secondes.
 
-`/!\` A ce stade, la gateway est un point d'accès public avec NAT sur le réseau filaire. Ne pas laisser la passerelle branchée ainsi pendant des heures. Dans la suite, nous bloquerons l'accès wifi public par une clé WPA.
+!!! warning
+     A ce stade, la gateway est un point d'accès public avec NAT sur le réseau filaire. Ne pas laisser la passerelle branchée ainsi pendant des heures. Dans la suite, nous bloquerons l'accès wifi public par une clé WPA.
 
 * Depuis l'ordinateur, parcourir les réseaux wifi et se connecter à `MikroTik-XXX`,
 * Lancer un navigateur web pour se rendre sur la page [http://192.168.88.1/](http://192.168.88.1/),
@@ -49,7 +51,8 @@ Vérifier que l'accès à l'interface est bien opérationnel. Dans la négative,
 
 ### Sécuriser le point d'accès wifi interne
 
-Afin de ne pas laisser le réseau wifi ouvert, nous suggérons ici de fixer une clé WPA/WPA2.
+!!! warning
+    Afin de ne pas laisser le réseau wifi ouvert, nous suggérons ici de fixer une clé WPA/WPA2.
 
 * Paramétrer le pays "Country",
 * Cocher les sécurités WPA et wPA2,
@@ -61,6 +64,8 @@ Afin de ne pas laisser le réseau wifi ouvert, nous suggérons ici de fixer une 
 Le réseau wifi est maintenant sécurisé. Se reconnecter au SSID `MikroTik-XXX` en entrant la clé WPA pour vérifier que tout est OK. Nous verrons plus loin comment désactiver l'interface wifi.
 
 ### Configuration de l'interface LoRaWAN
+
+Une fois les aspects réseaux/wifi/IP paramétrés, il faut configurer la partie LoRaWAN de la gateway.
 
 * Aller sur `http://a.b.c.d/` (adresse IP de la gateway relevée plus haut) si Ethernet, ou [http://192.168.88.1/](http://192.168.88.1/) si vous êtes connectés via le wifi,
 * Cliquer le bouton `WebFig` en haut à droite de l'écran,
@@ -82,7 +87,8 @@ Network Servers : loraserver.tetaneutral.net
 
 * Cocher `Enabled` en haut, puis cliquer sur le bouton `OK`.
 
-Remarque : pour pouvoir modifier ultérieurement ces paramètres, il faut commencer par décocher `Enabled`, puis faire OK ; sinon, le message _Couldn't change LoRa Device - Can't change conf. while device is running (6)_ apparaît.
+!!! tip
+    Pour pouvoir modifier ultérieurement ces paramètres, il faut commencer par décocher `Enabled`, puis faire OK ; sinon, le message _Couldn't change LoRa Device - Can't change conf. while device is running (6)_ apparaît.
 
 ### Optionnel : désactiver l'interface wifi
 
