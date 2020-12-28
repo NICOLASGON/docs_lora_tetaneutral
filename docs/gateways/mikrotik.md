@@ -49,6 +49,17 @@ Pour réaliser la configuration, le matériel suivant est nécessaire :
 
 Vérifier que l'accès à l'interface est bien opérationnel. Dans la négative, recommencer depuis le début.
 
+### Mise à jour du système
+
+Procéder ensuite à la mise à jour du système embarqué sur la passerelle :
+
+* Toujours depuis l'interface _Quick Set_, cliquer sur le bouton _Check For Updates_
+* Si _New version is available_ apparaît, veiller à sélectionner le canal (_Channel_) Stable, puis cliquer le bouton _Download&Install_
+
+Au moment où le tutoriel est écrit (décembre 2020), la version déployée après mise à jour est `RouterOS v6.48 (stable)`
+
+Une fois la mise à jour effectuée, le message _Downloaded, rebooting..._ apparaît. Quelques minutes après, vous pouvez raffraichir la page et accéder à l'interface pour continuer la configuration.
+
 ### Sécuriser le point d'accès wifi interne
 
 !!! warning
