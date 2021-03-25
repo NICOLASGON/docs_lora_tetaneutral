@@ -4,7 +4,7 @@
 
 LoRa pour _Long Range_, est une modulation radio permettant à des équipements de transmettre des informations sans fil. C’est un réseau étendu à faible consommation (_Low Power Wide-Area Network_ (LPWAN)). Elle utilise la bande [ISM](https://fr.wikipedia.org/wiki/Bande_industrielle,_scientifique_et_m%C3%A9dicale) (868 Mhz en Europe, d'utilisation libre dans certaines mesures). Cette modulation radio correspond à la couche liaison.
 
-LoRaWAN est un protocole Low Power Wide Area Network (LPWAN) basé sur LoRa pour les objets connectés sans fils sur batterie dans un réseau régional, national ou mondial. LoRaWAN permet de la communication bi-directionnelle sécurisée (chiffrement AES128) ainsi que de la localisation. Le protocole correspond à la couche réseau.
+LoRaWAN est un protocole Low Power Wide Area Network (LPWAN) basé sur LoRa pour les objets connectés sans fils sur batterie dans un réseau régional, national ou mondial. LoRaWAN permet de la communication bi-directionnelle sécurisée (chiffrement basé sur AES128) ainsi que de la localisation. Le protocole correspond à la couche réseau.
 
 ## Quel est le débit ?
 
@@ -35,7 +35,7 @@ Il est particulièrement adapté aux communications "machine to machine" (M2M).
 
 L’ensemble des clients communique via un _broker_.
 
-Les clients s’enregistrent auprès du broker sur des topics, que l’on peut voir comme des chemins pour accéder à une ressource. Cela leur permet d’être avertis, notifiés lorsque quelqu'un publie sur ces topics.
+Les clients s'abonnent auprès du broker à des _topics_. On peut les voir comme des chemins pour accéder à une ressource. Cela leur permet d’être notifiés lorsque quelqu'un publie sur ces topics.
 
 Cela peut être un topic de température par exemple : `/sensor/1/temperature`.
 
@@ -153,13 +153,13 @@ Dans notre cas, il s'agit de relier les antennes des objets au reste du réseau 
 
 Ainsi, la passerelle LoRa doit disposer d’au moins 2 interfaces de communication; une radio LoRa et une interface Ethernet, WiFi ou 3G/4G.
 
-## Quelles sont les étapes-clés pour mettre en place un réseau LoRa ?
+## Comment faire son propre réseau LoRa ?
 
 Il faut, pour cela, se munir d’une antenne reliée à internet (par Wi-Fi, câble Ethernet, connexion 3G…) avec une station de base émettant en France sur la bande 868 MHz. Le réseau peut-être privé ou public suivant le domaine d’application. Une entreprise préférera protéger les données transmises. A noter que la bande de fréquence disponible change par pays. Aux Etats-Unis, par exemple, la bande de fréquence utilisée pour le réseau LoRa est 915 MHz.
 
 Les objets connectés doivent, quant à eux, être équipés d’une puce LoRa qui leur permet de recevoir le signal de l’antenne. Un émetteur récepteur de ce type coûte environ 7 euros à l’unité, beaucoup moins si la commande est importante. Mais sans passerelle et sans antenne compatible, le fonctionnement du réseau est impossible. Les opérateurs agissent principalement à ce niveau.
 
-## Et la consommation énergétique dans tout ça ?
+## Qu'en est-il de consommation énergétique ?
 
 LoRaWAN est un protocole spécialement développé pour limiter au maximum la consommation d'énergie. Un objet LoRaWAN devrait être capable de fonctionner sur pile plus d'un an en fonction de son programme. On distingue trois modes de fonctionnements :
 
@@ -171,7 +171,7 @@ LoRaWAN est un protocole spécialement développé pour limiter au maximum la co
 
 Cependant, les possibilités de combinaisons sont nombreuses et une technologie de réseau n’en efface pas une autre. La plupart des solutions combinent réseau LoRa, fonctionnalités Bluetooth et Wifi avec transmission de données par le biais de réseau cellulaire. Ainsi la consommation énergétique peut varier en fonction des solutions choisies.
 
-## Et l'écologie dans tout ça ?
+## Est-ce écologique ?
 
 C'est tout simplement catastrophique. Comme tous composants informatiques, cela nécessite des terres rares, des métaux lourds le plus souvent extraits dans des conditions environnementales et sociales affreuses.
 

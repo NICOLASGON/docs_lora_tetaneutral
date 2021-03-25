@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../GITs/embedded/TP-microcontroleur/src/Yah/Yah-LoRaWAN-join-BP-fin-TP5-TP6"
+		},
+		{
+			"name": "Yah-DS18B20PAR",
+			"path": "../../../../../GITs/embedded/TP-microcontroleur/src/Yah/Yah-DS18B20PAR"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
