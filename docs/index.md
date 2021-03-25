@@ -9,11 +9,11 @@ Ce projet s'articule autour de quatre points :
 
 * Couverture : Offrir une couverture maximale en déployant des passerelles LoRaWAN. Certaines sont en production sur Toulouse, Albi et Castres. Tous les points relais de Tetaneutral.net peuvent devenir des lieux d'installation de passerelles.
 
-* Ressources : Écrire et partager un ensemble de tutoriels et ressources pédagogiques du collège à l'université. Parmi les ressources en cours d'écriture citons des relevés de pollution, de température, de position... Les aspects pédagogiques sont importants. Plusieurs enseignants et enseignantes de la région ont manifesté leur intérêt. Certains établissements sont équipés de nos passerelles LoRaWAN.
+* Ressources : Écrire et partager un ensemble de tutoriels et ressources pédagogiques du collège à l'université : relevés de données de pollution, de température, de position GPS... Plusieurs enseignantes et enseignants de la région ont manifesté leur intérêt. Des lycées, universités et école d'ingénieurs sont équipés de nos passerelles.
 
-* Objets connectés : Proposer des objets de type Arduino et des capteurs afin de pouvoir pousser facilement des données sur nos plateformes et les traiter (visualisation, envoyer une commande selon les valeurs...)
+* Objets connectés : Selectionner des objets et des capteurs afin de pouvoir pousser facilement des données sur nos plateformes et les traiter (visualisation, envoyer une commande selon les valeurs...)
 
-* Recherche : Fournir une plate-forme utilisable pour la recherche sur les protocoles radios, les optimisations, le réseau... En plus de la possibilité de modifier la pile radio, nous proposons des outils comme InfluxDB, Node-RED et grafana.
+* Recherche : Fournir une plate-forme utilisable pour la recherche sur les protocoles radios, les optimisations, le réseau, al cryptographie de l'IoT... En plus de la possibilité de modifier la pile radio, nous proposons des outils comme InfluxDB, Node-RED et grafana.
 
 Vous êtes enseignant ou enseignante en collège, lycée, université ? Dans l'éducation populaire ? Vous avez un intérêt professionnel ou simplement personnel pour ce sujet ?
 
@@ -49,11 +49,11 @@ Les enseignantes et enseignants membres de ces associations utilisent POD-IoT po
 
 leurs sympathisants, des enseignants de collèges, lycées et universités...
 
-## Contribuer à la documentation
+## Participer !
 
-Ce site est généré par mkdocs à partir de documents texte en markdown. Oui, nous aimons bien les sites statiques !
+Ce site est généré par `mkdocs` à partir de documents texte en markdown. Oui, nous aimons bien les sites statiques !
 
-Pour contribuer, il suffit d'installer mkdocs et le thème :
+Pour contribuer, il suffit d'installer mkdocs et le thème du site avec :
 ```
 pip install mkdocs mkdocs-material
 ```
