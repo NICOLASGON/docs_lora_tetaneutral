@@ -86,6 +86,8 @@ Une fois les aspects réseaux/wifi/IP paramétrés, il faut configurer la partie
 ```
 Name : loraserver.tetaneutral.net
 Address : loraserver.tetaneutral.net
+Up port : 1700
+Down port : 1700
 ```
 
 * Dans l'onglet `Devices`, cliquer sur la ligne du tableau pour l'éditer, entrer les paramètres suivants (laisser les autres paramètres tels quels) :
