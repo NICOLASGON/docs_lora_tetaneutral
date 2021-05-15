@@ -41,6 +41,9 @@ Pour réaliser la configuration, le matériel suivant est nécessaire :
 * Dans l'interface, repérer l'adresse IP obtenue par DHCP sur le réseau local a.b.c.d,
 * Désactiver (décocher) le _Firewall Router_.
 
+!!! warning
+    Penser à remettre le pare-feu à la fin de la configuration.
+
 ![passerelle-mikrotik](../assets/img/passerelle-mikrotik-network-01.png)
 
 * Appliquer la configuration par le bouton _Apply Configuration_ en bas de la page,
