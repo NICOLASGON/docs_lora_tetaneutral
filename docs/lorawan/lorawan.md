@@ -50,7 +50,7 @@ Nous avons décider de scinder l'architecture en deux :
 
 L'idée est d'avoir plusieurs gateways chez des adhérents ou dans des établissements afin d'avoir une couverture assez large, ce qui est facilité par le fait que la technologie LoRaWAN est longue portée (~2km en ville).
 
-## Logiciels
+## Logiciel : LMIC
 
 Pour les cartes type Arduino (WiNos, Feather M0...), nous utiliserons LMIC. IBM LMIC (LoRaMAC-in-C) est une librairie haut niveau qui fournit une implémentation complète de LoRaWAN classe A et B et qui fonctionne sur les bandes EU-868 et US-915.
 
@@ -60,7 +60,7 @@ Nous conseillons d'utiliser le fork suivant :
 
 ## Matériels pour passerelles LoRaWAN
 
-Notre kit actuel est basée sur un concentrateur LoRa IMST et un RaspberryPi
+Notre kit actuel est basée sur un concentrateur [LoRa IMST et un RaspberryPi](https://docs.lora.tetaneutral.net/gateways/imst/). Nous déployons peu à peu des passerelles [MikroTik wAP LoRa8](https://docs.lora.tetaneutral.net/gateways/mikrotik/)
 
 Voir la section passerelles pour plus d'informations.
 
