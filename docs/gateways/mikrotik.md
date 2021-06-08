@@ -118,3 +118,15 @@ Vous devriez voir passer les trames de statistiques de la passerelle en vous abo
 $ mosquitto_sub -h loraserver.tetaneutral.net -v -t "#"
 ```
 
+## Cas particuliers 
+
+### La passerelle est connectée en ethernet à une antenne TTN
+
+On peut se connecter en ssh à la passerelle. Pour s'assurer qu'elle sort sur Internet :
+
+
+[admin@MikroTik] /ip> address add address=91.224.149.169/32 network=91.224.148.0
+ interface=ether1    
+[admin@MikroTik] /ip> route add dst-address=0.0.0.0/0 gateway=91.224.148.0
+
+Fixer le DNS via l'interface (1.1.1.1 par exemple)

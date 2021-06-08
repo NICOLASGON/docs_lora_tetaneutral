@@ -54,7 +54,9 @@ L'idée est d'avoir plusieurs gateways chez des adhérents ou dans des établiss
 
 Pour les cartes type Arduino (WiNos, Feather M0...), nous utiliserons LMIC. IBM LMIC (LoRaMAC-in-C) est une librairie haut niveau qui fournit une implémentation complète de LoRaWAN classe A et B et qui fonctionne sur les bandes EU-868 et US-915.
 
-[https://github.com/matthijskooijman/arduino-lmic](https://github.com/matthijskooijman/arduino-lmic)
+Nous conseillons d'utiliser le fork suivant :
+
+[https://github.com/mcci-catena/arduino-lmic](https://github.com/mcci-catena/arduino-lmic)
 
 ## Matériels pour passerelles LoRaWAN
 

@@ -21,9 +21,11 @@ La bande 868Mhz fait partie des bandes dites ISM (industriel, scientifique et m�
 Cette ressource hertzienne doit donc pouvoir être partagé entre de nombreux acteurs. Pour cela, la loi impose certaines limitations: 
 
 * limitation de la puissance d'émission utilisable. La PAR (puissanca apparente rayonnée) ne doit pas dépasser 25mW pour du 868 Mhz.
-* limitation du taux d'utilisation temporel de la ressource. C'est le rapport de temps sur une heure durant lequel l’équipement émet effectivemen. Plus connu par le terme de _duty cycle_ il être inférieur à 1% (868,0-868,6 MHz) voire 0,1% (868,7-869,2 MHz) suivant les canaux utilisés. Par exemple avec un _duty cylce_ de 1%, si pour émettre votre message, votre émetteur utilise la bande pendant 36 secondes, il devra attendre 1h (3600 secondes) avant de pouvoir émettre à nouveau. Au exemple, s'il nécessite 5 secondes pour envoyer un message, alors il pourra en envoyer environ 172 par jour. Cela correspond à 86400/(5*100).
+* limitation du taux d'utilisation temporel de la ressource. C'est le rapport de temps sur une heure durant lequel l’équipement émet effectivemen. Plus connu par le terme de _duty cycle_ il être inférieur à 1% (868,0-868,6 MHz) voire 0,1% (868,7-869,2 MHz) suivant les canaux utilisés. Par exemple avec un _duty cylce_ de 1%, si pour émettre votre message, votre émetteur utilise la bande pendant 36 secondes, il devra attendre 1h (3600 secondes) avant de pouvoir émettre à nouveau. Autre exemple, s'il nécessite 5 secondes pour envoyer un message, alors il pourra en envoyer environ 172 par jour. Cela correspond à 86400/(5*100).
 
 Voir : https://www.anfr.fr/fileadmin/mediatheque/documents/tnrbf/Annexe_7_Mod8.pdf
+
+D'où la nécessité d'utiliser des protocoles de communication économes en durée d'émission !
 
 À noter que la bande ISM 868Mhz est libre d'usage en Europe mais interdite aux USA où c'est celle en 915Mhz qui est sans licence.
 
