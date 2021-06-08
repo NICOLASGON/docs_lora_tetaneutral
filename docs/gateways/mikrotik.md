@@ -41,6 +41,9 @@ Pour réaliser la configuration, le matériel suivant est nécessaire :
 * Dans l'interface, repérer l'adresse IP obtenue par DHCP sur le réseau local a.b.c.d,
 * Désactiver (décocher) le _Firewall Router_.
 
+!!! warning
+    Penser à remettre le pare-feu à la fin de la configuration.
+
 ![passerelle-mikrotik](../assets/img/passerelle-mikrotik-network-01.png)
 
 * Appliquer la configuration par le bouton _Apply Configuration_ en bas de la page,
@@ -86,6 +89,8 @@ Une fois les aspects réseaux/wifi/IP paramétrés, il faut configurer la partie
 ```
 Name : loraserver.tetaneutral.net
 Address : loraserver.tetaneutral.net
+Up port : 1700
+Down port : 1700
 ```
 
 * Dans l'onglet `Devices`, cliquer sur la ligne du tableau pour l'éditer, entrer les paramètres suivants (laisser les autres paramètres tels quels) :
@@ -100,6 +105,37 @@ Network Servers : loraserver.tetaneutral.net
 
 !!! tip
     Pour pouvoir modifier ultérieurement ces paramètres, il faut commencer par décocher `Enabled`, puis faire OK ; sinon, le message _Couldn't change LoRa Device - Can't change conf. while device is running (6)_ apparaît.
+
+### VPN Administration
+
+* Demander à un des administrateurs qu'il vous génère un certificat pour la passerelle et vous envoie les certificats à configurer
+* Dans la barre de gauche, cliquer `Files`
+* Importer les fichiers suivants grâce au bouton `Browse...` dans le champ `Upload` :
+  * ca.crt
+  * client.crt
+  * client.pem
+* Dans la barre de gauche, cliquer `System` puis `Certificates`
+* Dans l'onglet `Certificates` importer les certificats avec le bouton `Import`, selectionner les fichiers avec `Only File`, puis `Import`:
+  * ca.crt
+  * client.crt
+  * client.pem avec le mot de passe dans le champ `Passphrase`
+* Dans la barre de gauche, cliquer `Interfaces`, puis `Add New` et sélectionner `OVPN Client`
+* Entrer les paramètres suivants :
+
+```
+Enabled : Oui
+Name : VPN TTN
+Connect To : vpn.lora.tetaneutral.net
+User : <le nom de votre gateway convenu avec l'administrateur>
+Certificate : client.crt_0
+Verify Server Certificate : Oui
+Auth : sha1
+Cipher : aes 256
+```
+* De retour dans `Interfaces`, cliquer sur l'onglet `Interface List`
+* Cliquer sur la première ligne (qui n'a pas d'interface)
+* Selectionner l'interface VPN si ce n'est pas déjà fait
+* Valider
 
 ### Optionnel : désactiver l'interface wifi
 
