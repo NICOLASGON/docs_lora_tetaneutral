@@ -266,7 +266,7 @@ Pour la suite de la documentation, contactez-nous ! En effet, c'est un des TPs d
 
 ### Failles de sécurités ?
 
-* You need much less skills to read any key: simply connect 3 wires (tx rx gnd) to the LoRa module and read the keys easily, using the standard commands, published in the documentation.
+* Vous avez besoin de beaucoup moins de compétences pour lire n'importe quelle clé : il suffit de connecter 3 fils (tx rx gnd) au module LoRa et de lire les clés facilement, en utilisant les commandes standard, publiées dans la documentation.
 
     [https://github.com/anthonykirby/lora-packet](https://github.com/anthonykirby/lora-packet)
 
