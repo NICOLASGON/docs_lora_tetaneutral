@@ -19,6 +19,10 @@ Voici les méthodes utilisées, en général, pour assurer ces quatre fondamenta
 * intégrité : algorithmes de hachage comme SHA-1, MD5 ou SHA-256. On peut aussi utiliser du chiffrement.
 * non-répudiation : certificat numérique là encore basé sur du chiffrement.
 
+Ci-dessous un schéma de la sécurité du LoraWan :
+
+![](../assets/img/Schema_security.png)
+
 ## Méthodes d'activation : OTAA ou ABP ?
 
 Lors de la configuration d'un device, on doit choisir entre deux modes d'activation :
