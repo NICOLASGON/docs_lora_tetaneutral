@@ -282,7 +282,7 @@ Pour la suite de la documentation, contactez-nous ! En effet, c'est un des TPs d
 
 * Éviter le mode ABP car les clés de sessions sont stockées en dur et ne sont pas renouvelables facilement.
 
-* Chaque device doit avoir une AppKey différente. Si un device est compromis, seul celui-ci sera concerné et pas l'ensemble du parc
+* Chaque appareil doit avoir une AppKey différente. Si un device est compromis, seul celui-ci sera concerné et pas l'ensemble du parc
 
 * Prévoir une autre bande ou un autre canal sécurisé pour changer la AppKey.
 
