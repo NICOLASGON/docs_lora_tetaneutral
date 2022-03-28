@@ -294,17 +294,17 @@ Pour la suite de la documentation, contactez-nous ! En effet, c'est un des TPs d
 
 * En ABP, faire en sorte que les clés de session soient uniques pour chaque device.
 
-* Use a secure hardware element in a device to store the security credentials (en Bluetooth ou autre) mais aussi pour effectuer les opérations relatives à la vérofication d'intégrité des messages, le chiffrement et le déchiffrement. This will make it very hard to reverse-engineer the keys by scanning device memories. Additionally, use secure boot to ensure integrity of device firmware.
+* Use a secure hardware element in a device to store the security credentials (en Bluetooth ou autre) mais aussi pour effectuer les opérations relatives à la vérofication d'intégrité des messages, le chiffrement et le déchiffrement. Il sera ainsi très difficile de procéder à une rétro-ingénierie des clés en analysant les mémoires des appareils. En outre, utilisez le démarrage sécurisé pour garantir l'intégrité du micrologiciel du dispositif.
 
 * Ajouter une couche supplémentaire de chiffrement à la couche application. On peut utiliser un chiffrement asymétrique.
 
 * Toujours activer le compteur des messages uplink/downlink dans le serveur de réseau pour éviter les _replay attacks_
 
-* You can use your own private network server and/or application server with own gateways to prevent unauthorized access at the cloud level
+* Vous pouvez utiliser votre propre serveur de réseau privé et/ou votre serveur d'applications avec vos propres passerelles pour empêcher tout accès non autorisé au niveau du cloud.
 
 * Envoyer des messages aléatoires à intervalles irréguliers pour éviter les attaques de collecte de métadonnées et masquer l'activité (activités du noeud en fonction des événements (quelqu'un sonne à la porte un message est envoyé...)
 
-LoRaWAN was designed for hardware-constrained devices, so it had to balance many tradeoffs. Also, keep in mind that most applications are for sending data from distributed sensors to the cloud, not for controlling ATM cash dispensers. For typical applications, it's an easy to use, cheap, and effectively secure solution.
+LoRaWAN a été conçu pour des dispositifs soumis à des contraintes matérielles et a donc dû trouver un équilibre entre de nombreux compromis. Il faut également garder à l'esprit que la plupart des applications consistent à envoyer des données de capteurs distribués vers le cloud, et non à contrôler des distributeurs automatiques de billets. Pour les applications typiques, il s'agit d'une solution facile à utiliser, bon marché et efficacement sécurisée.
 
 ## Ressources
 
