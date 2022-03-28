@@ -1,5 +1,10 @@
 # Cryptographie et sécurité LoRaWAN
 
+## Qu'est-ce que la Cryptographie ?
+* En général, la cryptographie est une technique d'écriture où un message chiffré est écrit à l'aide de codes secrets ou de clés de chiffrement. La cryptographie est principalement utilisée pour protéger un message considéré comme confidentiel. 
+* Cette méthode est utilisée dans un grand nombre de domaines, tels que la défense, les technologies de l'information, la protection de la vie privée, etc. Il existe de nombreux algorithmes cryptographiques qui peuvent être utilisés pour chiffrer (et déchiffrer pour le destinataire) le message.
+* Certains sont considérés comme basiques (par exemple, la lettre de l'alphabet est décalée vers la droite ou la gauche avec un certain nombre de notes), d'autres offrent un niveau de sécurité presque absolu.
+
 ## Sécurité ?
 
 Ce que l'on appelle *sécurité* d'un système d'information repose sur quatre piliers :
@@ -325,3 +330,5 @@ Voir [https://www.elektormagazine.com/news/lorawan](https://www.elektormagazine.
 When you want to decode & decrypt a LoRaWAN PHYPayload yourself, please see: [https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode](https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode) 142
 
 For just decrypting the FRMPayload, please see: [https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload](https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload) 114
+
+Comprendre la Cryptographie : https://www.oracle.com/fr/security/qu-est-ce-que-la-cryptographie.html
