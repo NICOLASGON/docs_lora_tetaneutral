@@ -1,5 +1,6 @@
 # Réseau LoRaWAN ouvert
 
+/!\ Mise à jour en cours au 09/03/2025 /!\
 
 ![couverture reseau LoRaWAN](../assets/img/couverture-reseau.png)
 
