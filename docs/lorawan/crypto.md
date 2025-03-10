@@ -322,6 +322,6 @@ En explorant le code de l'outils nous avons remarqué qu'ils utilisaient les lib
 
 Voir [https://www.elektormagazine.com/news/lorawan](https://www.elektormagazine.com/news/lorawan) (à vérifier dans les specifications)
 
-When you want to decode & decrypt a LoRaWAN PHYPayload yourself, please see: [https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode](https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode) 142
+Lorsque vous souhaitez décoder et déchiffrer un LoRaWAN PHYPayload vous-même, veuillez consulter: [https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode](https://godoc.org/github.com/brocaar/lorawan#example-PHYPayload--Decode) 142
 
-For just decrypting the FRMPayload, please see: [https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload](https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload) 114
+Pour simplement déchiffrer le FRMPayload, veuillez consulter: [https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload](https://godoc.org/github.com/brocaar/lorawan#EncryptFRMPayload) 114
